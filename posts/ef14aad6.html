@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+
+<head>
+  
+  <title>Arch linux安装后配置与优化 - Ventoso | 山丘</title>
+  <meta charset="UTF-8">
+  <meta name="description" content="我一直试着去泰然处世。">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+  
+  
+
+    <!-- Site Verification -->
+    <meta name="baidu-site-verification" content="FaccXtoIXz" />
+
+  <link rel="shortcut icon" href="https://cdn.ventoso.top/wordpress/favicon.ico" type="image/png" />
+  <meta name="description" content="还是懒得看 wiki 啊">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Arch linux安装后配置与优化">
+<meta property="og:url" content="https://ventoso.top/posts/ef14aad6.html">
+<meta property="og:site_name" content="Ventoso | 山丘">
+<meta property="og:description" content="还是懒得看 wiki 啊">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-04-25T02:08:24.000Z">
+<meta property="article:modified_time" content="2020-04-25T14:35:54.000Z">
+<meta property="article:author" content="TniAsu">
+<meta property="article:tag" content="折腾笔记">
+<meta property="article:tag" content="linux">
+<meta property="article:tag" content="manjaro">
+<meta property="article:tag" content="arch">
+<meta name="twitter:card" content="summary">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/gh/nexmoe/nexmoe.github.io@latest/css/style.css,npm/highlight.js@9.15.8/styles/atom-one-dark.css,gh/nexmoe/nexmoe.github.io@latest/lib/mdui_043tiny/css/mdui.css,gh/nexmoe/nexmoe.github.io@latest/lib/iconfont/iconfont.css" crossorigin>
+  
+  <!--<link rel="stylesheet" href="/css/style.css?v=1587876856129">-->
+
+   
+    <style>
+      .nexmoe-avatar img:hover {
+        -webkit-transform: rotateZ(360deg);
+        -moz-transform: rotateZ(360deg);
+        transform: rotateZ(360deg);
+      }	
+    </style>
+  
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body class="mdui-drawer-body-left">
+  
+  <div id="nexmoe-background">
+    <div class="nexmoe-bg" style="background-image: url(https://cdn.ventoso.top/mount-fuji.jpg)"></div>
+    <div class="mdui-appbar mdui-shadow-0">
+      <div class="mdui-toolbar">
+        <a mdui-drawer="{target: '#drawer', swipe: true}" title="menu" class="mdui-btn mdui-btn-icon mdui-ripple"><i class="mdui-icon nexmoefont icon-menu"></i></a>
+        <div class="mdui-toolbar-spacer"></div>
+        <!--<a href="javascript:;" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">search</i></a>-->
+        <a href="/" title="TniAsu" class="mdui-btn mdui-btn-icon"><img src="https://cdn.ventoso.top/wordpress/avatar.png" alt="TniAsu"></a>
+       </div>
+    </div>
+  </div>
+  <div id="nexmoe-header">
+      <div class="nexmoe-drawer mdui-drawer" id="drawer">
+    <div class="nexmoe-avatar mdui-ripple">
+        <a href="/" title="TniAsu">
+            <img src="https://cdn.ventoso.top/wordpress/avatar.png" alt="TniAsu" alt="TniAsu">
+        </a>
+    </div>
+    <div class="nexmoe-count">
+        <div><span>文章</span>10</div>
+        <div><span>标签</span>11</div>
+        <div><span>分类</span>2</div>
+    </div>
+    <div class="nexmoe-list mdui-list" mdui-collapse="{accordion: true}">
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="/" title="回到首页">
+            <i class="mdui-list-item-icon nexmoefont icon-home"></i>
+            <div class="mdui-list-item-content">
+                回到首页
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="/archives/" title="文章归档">
+            <i class="mdui-list-item-icon nexmoefont icon-container"></i>
+            <div class="mdui-list-item-content">
+                文章归档
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="/PY.html" title="我的朋友">
+            <i class="mdui-list-item-icon nexmoefont icon-unorderedlist"></i>
+            <div class="mdui-list-item-content">
+                我的朋友
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="/dist/docs/" title="Projects">
+            <i class="mdui-list-item-icon nexmoefont icon-tag-fill"></i>
+            <div class="mdui-list-item-content">
+                Projects
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="/about.html" title="关于博客">
+            <i class="mdui-list-item-icon nexmoefont icon-info-circle"></i>
+            <div class="mdui-list-item-content">
+                关于博客
+            </div>
+        </a>
+        
+    </div>
+    <aside id="nexmoe-sidebar">
+  
+  <div class="nexmoe-widget-wrap">
+    <div class="nexmoe-widget nexmoe-search">
+        <form id="search_form" action_e="https://cn.bing.com/search?q=site:ventoso.top" onsubmit="return search();">
+            <label><input id="search_value" name="q" type="search" placeholder="搜索"></label>
+        </form>
+    </div>
+</div>
+  
+  <div class="nexmoe-widget-wrap">
+        <h3 class="nexmoe-widget-title">社交按钮</h3>
+    <div class="nexmoe-widget nexmoe-social">
+        <a class="mdui-ripple" href="https://space.bilibili.com/26525320" target="_blank" mdui-tooltip="{content: '哔哩哔哩'}" style="color: rgb(231, 106, 141);background-color: rgba(231, 106, 141, .15);">
+            <i class="nexmoefont icon-bilibili"></i>
+        </a><a class="mdui-ripple" href="https://github.com/ventoso/" target="_blank" mdui-tooltip="{content: 'GitHub'}" style="color: rgb(25, 23, 23);background-color: rgba(25, 23, 23, .15);">
+            <i class="nexmoefont icon-github"></i>
+        </a><a class="mdui-ripple" href="http://wpa.qq.com/msgrd?v=3&uin=3484098808&site=qq&menu=yes" target="_blank" mdui-tooltip="{content: 'QQ'}" style="color: rgb(231, 106, 141);background-color: rgba(231, 106, 141, .15);">
+            <i class="nexmoefont icon-QQ"></i>
+        </a><a class="mdui-ripple" href="/atom.xml" target="_blank" mdui-tooltip="{content: 'Rss'}" style="color: rgb(25, 23, 23);background-color: rgba(25, 23, 23, .15);">
+            <i class="nexmoefont icon-rss"></i>
+        </a>
+    </div>
+</div>
+
+  
+  
+  <div class="nexmoe-widget-wrap">
+    <h3 class="nexmoe-widget-title">标签云</h3>
+    <div id="randomtagcloud" class="nexmoe-widget tagcloud nexmoe-rainbow">
+      <a href="/tags/C%E8%AF%AD%E8%A8%80/" style="font-size: 10px;">C语言</a> <a href="/tags/arch/" style="font-size: 10px;">arch</a> <a href="/tags/linux/" style="font-size: 12.5px;">linux</a> <a href="/tags/manjaro/" style="font-size: 12.5px;">manjaro</a> <a href="/tags/sharlist/" style="font-size: 10px;">sharlist</a> <a href="/tags/something/" style="font-size: 17.5px;">something</a> <a href="/tags/%E4%BA%91%E5%AD%98%E5%82%A8/" style="font-size: 12.5px;">云存储</a> <a href="/tags/%E5%A4%A9%E7%BF%BC%E4%BA%91/" style="font-size: 10px;">天翼云</a> <a href="/tags/%E6%89%8B%E6%9C%BA/" style="font-size: 10px;">手机</a> <a href="/tags/%E6%8A%98%E8%85%BE%E7%AC%94%E8%AE%B0/" style="font-size: 20px;">折腾笔记</a> <a href="/tags/%E9%9A%8F%E5%BF%83/" style="font-size: 15px;">随心</a>
+    </div>
+    
+      <script>
+        var maxTagcloud = parseInt(10);
+        var tags_length = parseInt(11);
+        var tags_arr = [];
+        for(var i = 0; i < tags_length; i++){
+          tags_arr.push(i);
+        }
+        tags_arr.sort(function (l, r) {
+          return Math.random() > 0.5 ? -1 : 1;
+        });
+        tags_arr = tags_arr.slice(0, maxTagcloud < tags_length ? tags_length - maxTagcloud : 0);
+        for(var tag_i = 0; tag_i < tags_arr.length; tag_i++){
+          document.getElementById("randomtagcloud").children[tags_arr[tag_i]].style.display = 'none';
+        }
+      </script>
+    
+  </div>
+
+  
+  
+  <div class="nexmoe-widget-wrap">
+    <h3 class="nexmoe-widget-title">文章分类</h3>
+    <div class="nexmoe-widget">
+
+      <ul class="category-list">
+
+        
+
+
+        
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/Something/">Something</a>
+          <span class="category-list-count">3</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/何为折腾/">何为折腾</a>
+          <span class="category-list-count">7</span>
+        </li>
+
+        
+      </ul>
+
+    </div>
+  </div>
+
+
+  
+</aside>
+    <div class="nexmoe-copyright">
+        &copy; 2020 TniAsu
+        Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+        & <a href="https://nexmoe.com/hexo-theme-nexmoe.html" target="_blank">Nexmoe</a>
+         <br/><a href="http://www.beian.miit.gov.cn/?spm=a2c4g.11186623.2.16.1f331462AgLtxi" target="_blank">豫ICP备20004916号-1</a> 
+    </div>
+</div><!-- .nexmoe-drawer -->
+
+  </div>
+  <div id="nexmoe-content">
+    <div class="nexmoe-primary">
+        <div class="nexmoe-post">
+  
+      <div class="nexmoe-post-cover" style="padding-bottom: 50%;"> 
+          <img data-src="https://cdn.ventoso.top/mount-fuji.jpg" data-sizes="auto" alt="Arch linux安装后配置与优化" class="lazyload">
+
+      </div>
+  
+  
+  <div class="nexmoe-post-meta nexmoe-rainbow" style="margin:10px 0!important;">
+    <a><i class="nexmoefont icon-calendar-fill"></i>2020年04月25日</a>
+    <a><i class="nexmoefont icon-areachart"></i>1.1k 字</a>
+    <a><i class="nexmoefont icon-time-circle-fill"></i>大概 4 分钟</a>
+</div>
+
+  <div class="nexmoe-post-right">
+    
+      <div class="nexmoe-fixed">
+        <div class="nexmoe-valign">
+            <div class="nexmoe-toc">
+                <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Arch-linux-配置与调优"><span class="toc-number">1.</span> <span class="toc-text">Arch linux 配置与调优</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#写在前面"><span class="toc-number">1.1.</span> <span class="toc-text">写在前面</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#基本配置"><span class="toc-number">1.2.</span> <span class="toc-text">基本配置</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#添加新用户"><span class="toc-number">1.2.1.</span> <span class="toc-text">添加新用户</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#为wheel组配置sudo权限"><span class="toc-number">1.2.2.</span> <span class="toc-text">为wheel组配置sudo权限</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#加入Archlinuxcn源"><span class="toc-number">1.2.3.</span> <span class="toc-text">加入Archlinuxcn源</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#AUR"><span class="toc-number">1.2.4.</span> <span class="toc-text">AUR</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#配置中文"><span class="toc-number">1.2.5.</span> <span class="toc-text">配置中文</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#zsh"><span class="toc-number">1.2.6.</span> <span class="toc-text">zsh</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#常用软件"><span class="toc-number">1.2.7.</span> <span class="toc-text">常用软件</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#环境配置"><span class="toc-number">1.3.</span> <span class="toc-text">环境配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#美化"><span class="toc-number">1.4.</span> <span class="toc-text">美化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#优化"><span class="toc-number">1.5.</span> <span class="toc-text">优化</span></a></li></ol></li></ol>
+            </div>
+        </div>
+      </div>
+    
+  </div>
+
+  <article>
+    <p>还是懒得看 wiki 啊</p>
+<a id="more"></a>
+
+<h2 id="Arch-linux-配置与调优"><a href="#Arch-linux-配置与调优" class="headerlink" title="Arch linux 配置与调优"></a>Arch linux 配置与调优</h2><p>前一天尝试在电脑上装 arch ，参照着大佬：<a href="">幻若梦云</a>写的 arch linux 安装教程，也算是成功地把arch linux装在了电脑上，但是装机之后，却发现网上地 arch linux 的配置教程却少的可怜，于是就想着自己写一些相关的配置过程。</p>
+<h3 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h3><ul>
+<li><p><strong>滚动更新机制</strong></p>
+<ul>
+<li>所谓滚动更新就是指不能单独更新某个特定软件包，每次更新必须将全部软件包更新到最新</li>
+</ul>
+</li>
+<li><p><strong>滚挂</strong></p>
+<ul>
+<li>当有些软件包出现问题（如果是官方源的包，一般官网会告知），更新 (sudo pacman -Syyu) 之后可能会有整个系统挂掉的风险。</li>
+</ul>
+</li>
+<li><p><strong>避免滚挂</strong></p>
+</li>
+</ul>
+<ol>
+<li>良好的习惯，充足的准备</li>
+</ol>
+<p>   不要开启test库</p>
+<p>   更新前查看官网</p>
+<p>   准备一个 livecd</p>
+<ol start="2">
+<li><p>及时备份</p>
+<p>使用 Rsync 命令备份你的系统</p>
+<blockquote>
+<p>该部分内容正在编辑中</p>
+</blockquote>
+</li>
+</ol>
+<p>   使用 tar 命令来备份你的系统</p>
+<p>   常用的备份命令是</p>
+<pre><code class="shell">   tar cvpjf backup.tar.bz2 --exclude-from=excl /</code></pre>
+<h3 id="基本配置"><a href="#基本配置" class="headerlink" title="基本配置"></a>基本配置</h3><h4 id="添加新用户"><a href="#添加新用户" class="headerlink" title="添加新用户"></a><strong>添加新用户</strong></h4><pre><code class="shell">#添加新用户
+useradd -m -G wheel -s /bin/bash 用户名
+#设置密码
+passwd 用户名 #输入此条命令后按照输出内容输入密码,密码需要输入两次，且密码不会显示</code></pre>
+<h4 id="为wheel组配置sudo权限"><a href="#为wheel组配置sudo权限" class="headerlink" title="为wheel组配置sudo权限"></a><strong>为wheel组配置sudo权限</strong></h4><p><code>sudo</code> 一般都会包含在 <code>base-devel</code> 中，若是安装系统时已经装过<code>base-devel</code>就无需再进行安装</p>
+<p>否则</p>
+<pre><code class="shell">pacman -S base-devel #此时还没有配置sudo，所以应该在root下执行该命令</code></pre>
+<p><strong>或</strong></p>
+<pre><code class="shell">pacman -S sudo #此时还没有配置sudo，所以应该在root下执行该命令</code></pre>
+<p>编辑 sudoers 文件</p>
+<pre><code class="shell">visudoers 
+#此条命令默认使用的是vi编辑器，如果没有安装vi，可以先将自己所用的编辑器创建一个软连接到/usr/bin/vi
+#执行
+ln -s /usr/bin/vim /usr/bin/vi #此处的vim替换为自己所用的编辑器即可
+visudoers</code></pre>
+<p>执行上方命令来进行配置，在文件中找到</p>
+<pre><code>## Uncomment to allow members of group wheel to execute any command
+# %wheel ALL=(ALL) ALL</code></pre><p>根据翻译可知道，去掉注释，wheel 组就可以执行任何命令，根据提示去 <code>%wheel ALL=(ALL) ALL</code> 前面的 <code>＃</code> 掉注释即可,如下。</p>
+<pre><code>## Uncomment to allow members of group wheel to execute any command
+%wheel ALL=(ALL) ALL</code></pre><p>接着按照编辑器所提供的命令来保存。</p>
+<p> <code>vim</code> 可以使用 <code>esc</code> 来退出编辑模式，接着输入 <code>:wq!</code> 来强制保存。</p>
+<p>接着可以登录刚刚创建的用户并尝试 <code>sudo</code> 命令</p>
+<h4 id="加入Archlinuxcn源"><a href="#加入Archlinuxcn源" class="headerlink" title="加入Archlinuxcn源"></a><strong>加入Archlinuxcn源</strong></h4><p>以 <code>root</code> 或 <code>sudo</code> 形式编辑 <code>/etc/pacman.conf</code></p>
+<pre><code class="shell">sudo vim /etc/pacman.conf</code></pre>
+<p>在文件末加入官方archlinuxcn镜像源</p>
+<pre><code class="、">[archlinuxcn]
+Server = http://repo.archlinuxcn.org/$arch</code></pre>
+<p>更多镜像源见<a href="https://github.com/archlinuxcn/mirrorlist-repo" target="_blank" rel="noopener">传送门</a></p>
+<p>接着检查更新并导入 PGP Keys ：</p>
+<pre><code class="shell">sudo pacman -Syy &amp;&amp; sudo pacman -S archlinuxcn-keyring</code></pre>
+<h4 id="AUR"><a href="#AUR" class="headerlink" title="AUR"></a><strong>AUR</strong></h4><p><code>Archlinuxcn</code> 源里面已经有了预编译的 <code>yay</code> 包，无需编译安装，直接使用 <code>pacman</code> 安装即可</p>
+<pre><code class="shell">sudo pacman -S yay</code></pre>
+<p>安装之后就可以使用<code>yay</code> 替代 <code>sudo pacman</code> </p>
+<h4 id="配置中文"><a href="#配置中文" class="headerlink" title="配置中文"></a><strong>配置中文</strong></h4><ol>
+<li><p><strong>中文输入法(此处只记录fcitx)</strong></p>
+<pre><code class="shell">sudo pacman -S fcitx fcitx-im fcitx-googlepinyin fcitx-configtool #根据个人喜好自行替换</code></pre>
+<p>全部安装</p>
+<p>接着配置.xprofile文件</p>
+<pre><code class="shell">vim ~/.xprofile</code></pre>
+<p>在里面加入</p>
+<pre><code>export GTK_IM_MODULE=fcitx
+export QT_IM_MODULE=fcitx
+export XMODIFIERS=&quot;@im=fcitx&quot;</code></pre><p>注销再登入即可</p>
+</li>
+<li><p><strong>中文字体</strong></p>
+<pre><code class="shell">yay -S wqy-bitmapfont wqy-microhei wqy-microhei-lite wqy-zenhei adobe-source-han-mono-cn-fonts adobe-source-han-sans-cn-fonts adobe-source-han-serif-cn-fonts</code></pre>
+<p>再进行编辑<code>~/.xprofile</code> 文件</p>
+<p>加入</p>
+<pre><code>export LANG=zh_CN.UTF-8
+export LANGUAGE=zh_CN:en_US
+export LC_CTYPE=en_US.UTF-8</code></pre><p>保存后注销或重启即可</p>
+</li>
+</ol>
+<h4 id="zsh"><a href="#zsh" class="headerlink" title="zsh"></a>zsh</h4><pre><code class="shell">sudo pacman -S zsh
+sh -c &quot;$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)&quot; # 下载并配置ohmyzsh
+chsh -s /bin/zsh  #更换默认bash，重启后生效</code></pre>
+<h4 id="常用软件"><a href="#常用软件" class="headerlink" title="常用软件"></a>常用软件</h4><pre><code class="shell">yay -S wps-office # wps好评
+yay -S ttf-wps-fonts # wps所需字体
+
+yay -S google-chrome #谷歌浏览器
+yay -S git #git版本控制器
+yay -S typora #markdown编辑器
+yay -S ranger # 终端文件浏览器
+yay -S netease-cloud-music #网易云音乐
+yay -S baidunetdisk # 百度网盘
+yay -S wiznote #为知云笔记
+yay -S deepin-screenshot #深度截图
+yay -S telegram-desktop #tg</code></pre>
+<h3 id="环境配置"><a href="#环境配置" class="headerlink" title="环境配置"></a>环境配置</h3><p>待写</p>
+<h3 id="美化"><a href="#美化" class="headerlink" title="美化"></a>美化</h3><p>待写</p>
+<h3 id="优化"><a href="#优化" class="headerlink" title="优化"></a>优化</h3><p>待写</p>
+
+  </article>
+
+  <div class="nexmoe-post-meta nexmoe-rainbow">
+    
+        <a class="nexmoefont icon-appstore-fill -link" href="/categories/%E4%BD%95%E4%B8%BA%E6%8A%98%E8%85%BE/">何为折腾</a>
+    
+    
+        <a class="nexmoefont icon-tag-fill -link" href="/tags/arch/" rel="tag">arch</a> <a class="nexmoefont icon-tag-fill -link" href="/tags/linux/" rel="tag">linux</a> <a class="nexmoefont icon-tag-fill -link" href="/tags/manjaro/" rel="tag">manjaro</a> <a class="nexmoefont icon-tag-fill -link" href="/tags/%E6%8A%98%E8%85%BE%E7%AC%94%E8%AE%B0/" rel="tag">折腾笔记</a>
+    
+</div>
+
+  <div class="nexmoe-post-footer">
+    
+      
+  <div class="nexmoe-post-copyright">
+    <strong>本文作者：</strong>TniAsu<br>
+    <strong>本文链接：</strong><a href="https://ventoso.top/posts/ef14aad6.html" title="https:&#x2F;&#x2F;ventoso.top&#x2F;posts&#x2F;ef14aad6.html" target="_blank" rel="noopener">https:&#x2F;&#x2F;ventoso.top&#x2F;posts&#x2F;ef14aad6.html</a><br>
+    
+      <strong>版权声明：</strong>本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a> 协议进行许可
+    
+  </div>
+
+
+    
+    <section class="nexmoe-comment">
+    <div class="valine"></div>
+<script src='https://cdn.jsdelivr.net/npm/valine@1.3.9/dist/Valine.min.js'></script>
+<script>
+    // 使用方法 https://valine.js.org/quickstart.html
+    new Valine({
+        el: '.valine',
+        appId: 'S7HBVjrmhqipzhKE7Y5TCrgk-gzGzoHsz',
+        appKey: 'YNsurlMwYQ8TtcwNY6aXXOPU'
+    })
+</script>
+</section>
+  </div>
+</div>
+
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/combine/npm/lazysizes@5.1.0/lazysizes.min.js,gh/highlightjs/cdn-release@9.15.8/build/highlight.min.js,npm/mdui@0.4.3/dist/js/mdui.min.js,gh/nexmoe/nexmoe.github.io@latest/js/app.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<!--<script src="/js/app.js?v=1587876856130"></script>-->
+
+
+    <script src="https://cdn.jsdelivr.net/gh/xtaodada/xtaodada.github.io@0.0.2/copy.js"></script>
+
+
+
+  
+
+
+
+
+
+    <!-- baidu Analytics -->
+<script>
+    var _hmt = _hmt || [];
+    (function() {var hm = document.createElement('script');
+    hm.src = 'https://hm.baidu.com/hm.js?797932263520fc21235f0aacc3d3644b';
+    var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+</body>
+
+</html>
