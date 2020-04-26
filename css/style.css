@@ -151,7 +151,6 @@ body {
   font-size: 1.2em;
   font-weight: normal;
   padding: 12px 10px 10px;
-  border-bottom: 1px solid #eee;
   margin: 0;
 }
 #nexmoe-header .nexmoe-widget-wrap .nexmoe-widget ul {
@@ -163,7 +162,6 @@ body {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  border-bottom: 1px solid #eee;
   position: relative;
 }
 #nexmoe-header .nexmoe-widget-wrap .nexmoe-widget ul li a {
