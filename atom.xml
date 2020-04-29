@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Ventoso | 山丘</title>
+  
+  <subtitle>Anything</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://ventoso.top/"/>
+  <updated>2020-04-27T09:32:20.000Z</updated>
+  <id>https://ventoso.top/</id>
+  
+  <author>
+    <name>TniAsu</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>为你的 hexo 开启 gulp 压缩加速</title>
+    <link href="https://ventoso.top/posts/51356.html"/>
+    <id>https://ventoso.top/posts/51356.html</id>
+    <published>2020-04-27T08:06:28.000Z</published>
+    <updated>2020-04-27T09:32:20.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;访问速度是最能体现访问者幸福值的，这是我所认为的，而 gulp 似乎可以让我稍微离幸福近一点&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="何为折腾" scheme="https://ventoso.top/categories/%E4%BD%95%E4%B8%BA%E6%8A%98%E8%85%BE/"/>
+    
+    
+      <category term="hexo" scheme="https://ventoso.top/tags/hexo/"/>
+    
+      <category term="gulp" scheme="https://ventoso.top/tags/gulp/"/>
+    
+      <category term="优化" scheme="https://ventoso.top/tags/%E4%BC%98%E5%8C%96/"/>
+    
+      <category term="加速" scheme="https://ventoso.top/tags/%E5%8A%A0%E9%80%9F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Arch linux 配置与调优</title>
+    <link href="https://ventoso.top/posts/ef14aad6.html"/>
+    <id>https://ventoso.top/posts/ef14aad6.html</id>
+    <published>2020-04-25T02:08:24.000Z</published>
+    <updated>2020-04-29T07:43:50.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;还是懒得看 wiki 啊&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="何为折腾" scheme="https://ventoso.top/categories/%E4%BD%95%E4%B8%BA%E6%8A%98%E8%85%BE/"/>
+    
+    
+      <category term="折腾笔记" scheme="https://ventoso.top/tags/%E6%8A%98%E8%85%BE%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="linux" scheme="https://ventoso.top/tags/linux/"/>
+    
+      <category term="manjaro" scheme="https://ventoso.top/tags/manjaro/"/>
+    
+      <category term="arch" scheme="https://ventoso.top/tags/arch/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>二三事</title>
+    <link href="https://ventoso.top/posts/7ecb09b6.html"/>
+    <id>https://ventoso.top/posts/7ecb09b6.html</id>
+    <published>2020-04-21T16:00:00.000Z</published>
+    <updated>2020-04-25T14:28:17.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;strong&gt;有些东西已经消散了&lt;/strong&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="何为折腾" scheme="https://ventoso.top/categories/%E4%BD%95%E4%B8%BA%E6%8A%98%E8%85%BE/"/>
+    
+    
+      <category term="折腾笔记" scheme="https://ventoso.top/tags/%E6%8A%98%E8%85%BE%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="something" scheme="https://ventoso.top/tags/something/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>我的linux的开始</title>
+    <link href="https://ventoso.top/posts/22a18a6.html"/>
+    <id>https://ventoso.top/posts/22a18a6.html</id>
+    <published>2020-03-27T12:46:25.000Z</published>
+    <updated>2020-04-25T12:06:07.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;我对linux的一些认知（一）&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="何为折腾" scheme="https://ventoso.top/categories/%E4%BD%95%E4%B8%BA%E6%8A%98%E8%85%BE/"/>
+    
+    
+      <category term="折腾笔记" scheme="https://ventoso.top/tags/%E6%8A%98%E8%85%BE%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="linux" scheme="https://ventoso.top/tags/linux/"/>
+    
+      <category term="manjaro" scheme="https://ventoso.top/tags/manjaro/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>我总会在一个地方停留些时间</title>
+    <link href="https://ventoso.top/posts/a100e53a.html"/>
+    <id>https://ventoso.top/posts/a100e53a.html</id>
+    <published>2020-03-13T12:46:25.000Z</published>
+    <updated>2020-04-25T11:56:30.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;我总会在一个地方停留些天&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Something" scheme="https://ventoso.top/categories/Something/"/>
+    
+    
+      <category term="随心" scheme="https://ventoso.top/tags/%E9%9A%8F%E5%BF%83/"/>
+    
+      <category term="something" scheme="https://ventoso.top/tags/something/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>或许是最好用的天翼云目录索引程序-sharelist</title>
+    <link href="https://ventoso.top/posts/e7f3d2da.html"/>
+    <id>https://ventoso.top/posts/e7f3d2da.html</id>
+    <published>2020-03-13T12:46:25.000Z</published>
+    <updated>2020-04-25T12:06:39.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;如题，还有教程，资源，客套话……&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="何为折腾" scheme="https://ventoso.top/categories/%E4%BD%95%E4%B8%BA%E6%8A%98%E8%85%BE/"/>
+    
+    
+      <category term="折腾笔记" scheme="https://ventoso.top/tags/%E6%8A%98%E8%85%BE%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="云存储" scheme="https://ventoso.top/tags/%E4%BA%91%E5%AD%98%E5%82%A8/"/>
+    
+      <category term="sharlist" scheme="https://ventoso.top/tags/sharlist/"/>
+    
+      <category term="天翼云" scheme="https://ventoso.top/tags/%E5%A4%A9%E7%BF%BC%E4%BA%91/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>云存储，我的理解</title>
+    <link href="https://ventoso.top/posts/884712ce.html"/>
+    <id>https://ventoso.top/posts/884712ce.html</id>
+    <published>2020-03-12T12:46:25.000Z</published>
+    <updated>2020-04-25T12:06:12.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;云存储大火的今日，作为消费者，我们捷径何寻？&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="何为折腾" scheme="https://ventoso.top/categories/%E4%BD%95%E4%B8%BA%E6%8A%98%E8%85%BE/"/>
+    
+    
+      <category term="折腾笔记" scheme="https://ventoso.top/tags/%E6%8A%98%E8%85%BE%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="云存储" scheme="https://ventoso.top/tags/%E4%BA%91%E5%AD%98%E5%82%A8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>无用C语言笔记</title>
+    <link href="https://ventoso.top/posts/2cce625e.html"/>
+    <id>https://ventoso.top/posts/2cce625e.html</id>
+    <published>2020-03-07T12:46:25.000Z</published>
+    <updated>2020-04-25T12:06:26.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;关于我之前所学到过的浅薄的知识&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="何为折腾" scheme="https://ventoso.top/categories/%E4%BD%95%E4%B8%BA%E6%8A%98%E8%85%BE/"/>
+    
+    
+      <category term="折腾笔记" scheme="https://ventoso.top/tags/%E6%8A%98%E8%85%BE%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="C语言" scheme="https://ventoso.top/tags/C%E8%AF%AD%E8%A8%80/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>心生迷惘</title>
+    <link href="https://ventoso.top/posts/2d8fd6c9.html"/>
+    <id>https://ventoso.top/posts/2d8fd6c9.html</id>
+    <published>2020-03-06T12:46:25.000Z</published>
+    <updated>2020-04-29T07:47:23.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;可能我就是这样一个没有出息的人&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Something" scheme="https://ventoso.top/categories/Something/"/>
+    
+    
+      <category term="随心" scheme="https://ventoso.top/tags/%E9%9A%8F%E5%BF%83/"/>
+    
+      <category term="something" scheme="https://ventoso.top/tags/something/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>我的安卓鸡</title>
+    <link href="https://ventoso.top/posts/3106519f.html"/>
+    <id>https://ventoso.top/posts/3106519f.html</id>
+    <published>2020-03-01T12:46:25.000Z</published>
+    <updated>2020-04-28T01:18:32.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;在我看来，    &lt;del&gt;折腾手机的乐趣似乎远大于折腾电脑&lt;/del&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="何为折腾" scheme="https://ventoso.top/categories/%E4%BD%95%E4%B8%BA%E6%8A%98%E8%85%BE/"/>
+    
+    
+      <category term="折腾笔记" scheme="https://ventoso.top/tags/%E6%8A%98%E8%85%BE%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="手机" scheme="https://ventoso.top/tags/%E6%89%8B%E6%9C%BA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>这是开始</title>
+    <link href="https://ventoso.top/posts/8ac9d56f.html"/>
+    <id>https://ventoso.top/posts/8ac9d56f.html</id>
+    <published>2020-02-13T12:46:25.000Z</published>
+    <updated>2020-04-25T12:00:52.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt; 一些奇奇怪怪的想法&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Something" scheme="https://ventoso.top/categories/Something/"/>
+    
+    
+      <category term="随心" scheme="https://ventoso.top/tags/%E9%9A%8F%E5%BF%83/"/>
+    
+      <category term="something" scheme="https://ventoso.top/tags/something/"/>
+    
+  </entry>
+  
+</feed>
