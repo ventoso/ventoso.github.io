@@ -1,0 +1,105 @@
+<!DOCTYPE html><html lang="zh-CN"><head><title>Gulp in Hexo - 山丘</title><meta charset="UTF-8"><meta name="description" content="我一直试着去泰然处世。"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=5"><meta name="msvalidate.01" content="908C9E240B6691AB529B463DC7FCC8C1"><meta name="baidu-site-verification" content="FK6mluFuje"><meta name="baidu-site-verification" content="g5CCwf777d"><meta name="baidu-site-verification" content="BAQOcQFru2"><link rel="shortcut icon" href="https://cdn.ventoso.top/wordpress/favicon.ico" type="image/png"><meta name="description" content="使用 Gulp 来压缩你的 Hexo 静态资源"><meta property="og:type" content="article"><meta property="og:title" content="Gulp in Hexo"><meta property="og:url" content="https://www.lilineon.com/51356.html"><meta property="og:site_name" content="山丘"><meta property="og:description" content="使用 Gulp 来压缩你的 Hexo 静态资源"><meta property="og:locale" content="zh_CN"><meta property="article:published_time" content="2020-04-27T08:06:28.000Z"><meta property="article:modified_time" content="2020-07-01T15:40:00.000Z"><meta property="article:author" content="TniAsu"><meta property="article:tag" content="hexo"><meta property="article:tag" content="gulp"><meta property="article:tag" content="优化"><meta property="article:tag" content="加速"><meta name="twitter:card" content="summary"><link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/gh/ventoso/ventoso.github.io@1.0.3/css/style.css,npm/highlight.js@9.15.8/styles/atom-one-dark.css,gh/ventoso/ventoso.github.io@1.0.3/lib/mdui_043tiny/css/mdui.css,gh/ventoso/ventoso.github.io@latest/lib/iconfont/iconfont.css" crossorigin><meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/atom.xml" title="山丘" type="application/atom+xml"></head><body class="mdui-drawer-body-left"><div id="nexmoe-background"><div class="nexmoe-bg" style="background-image:url(https://cdn.ventoso.top/images/73032c9e550fc02235da772c02765af2.jpg!lite)"></div><div class="mdui-appbar mdui-shadow-0"><div class="mdui-toolbar"><a mdui-drawer="{target: '#drawer', swipe: true}" title="menu" class="mdui-btn mdui-btn-icon mdui-ripple"><i class="mdui-icon nexmoefont icon-menu"></i></a><div class="mdui-toolbar-spacer"></div> <a href="/" title="TniAsu" class="mdui-btn mdui-btn-icon"><img src="https://cdn.ventoso.top/wordpress/avatar.png" alt="TniAsu"></a></div></div></div><div id="nexmoe-header"><div class="nexmoe-drawer mdui-drawer" id="drawer"><div class="nexmoe-avatar mdui-ripple"> <a href="/" title="TniAsu"><img src="https://cdn.ventoso.top/wordpress/avatar.png" alt="TniAsu" alt="TniAsu"></a></div><div class="nexmoe-count"><div><span>文章</span>10</div><div><span>标签</span>16</div><div><span>分类</span>2</div></div><div class="nexmoe-list mdui-list" mdui-collapse="{accordion: true}"><a class="nexmoe-list-item mdui-list-item mdui-ripple" href="/" title="回到首页"><i class="mdui-list-item-icon nexmoefont icon-home"></i><div class="mdui-list-item-content"> 回到首页</div></a><a class="nexmoe-list-item mdui-list-item mdui-ripple" href="/archives/" title="文章归档"><i class="mdui-list-item-icon nexmoefont icon-container"></i><div class="mdui-list-item-content"> 文章归档</div></a><a class="nexmoe-list-item mdui-list-item mdui-ripple" href="/PY.html" title="是友人们"><i class="mdui-list-item-icon nexmoefont icon-unorderedlist"></i><div class="mdui-list-item-content"> 是友人们</div></a><a class="nexmoe-list-item mdui-list-item mdui-ripple" href="/about.html" title="关于我的"><i class="mdui-list-item-icon nexmoefont icon-info-circle"></i><div class="mdui-list-item-content"> 关于我的</div></a></div><aside id="nexmoe-sidebar"><div class="nexmoe-widget-wrap"><div class="nexmoe-widget nexmoe-search"><form id="search_form" action_e="https://cn.bing.com/search?q=site:ventoso.cn" onsubmit="return search()"> <label><input id="search_value" name="q" type="search" placeholder="搜索"></label></form></div></div><div class="nexmoe-widget-wrap"><div class="nexmoe-widget nexmoe-social"><a class="mdui-ripple" href="https://space.bilibili.com/26525320" target="_blank" mdui-tooltip="{content: '哔哩哔哩'}" style="color:#e76a8d;background-color:rgba(231,106,141,.15)"><i class="nexmoefont icon-bilibili"></i></a><a class="mdui-ripple" href="https://github.com/ventoso/" target="_blank" mdui-tooltip="{content: 'GitHub'}" style="color:#191717;background-color:rgba(25,23,23,.15)"><i class="nexmoefont icon-github"></i></a><a class="mdui-ripple" href="https://x.ventoso.cn/" target="_blank" mdui-tooltip="{content: 'Project'}" style="color:#e76a8d;background-color:rgba(231,106,141,.15)"><i class="nexmoefont icon-appstore-fill"></i></a><a class="mdui-ripple" href="/atom.xml" target="_blank" mdui-tooltip="{content: 'Rss'}" style="color:#191717;background-color:rgba(25,23,23,.15)"><i class="nexmoefont icon-rss"></i></a></div></div><div class="nexmoe-widget-wrap"><div class="nexmoe-widget"><ul class="category-list"><li class="category-list-item"> <a class="category-list-link" href="/categories/何为折腾/">何为折腾</a> <span class="category-list-count">7</span></li><li class="category-list-item"> <a class="category-list-link" href="/categories/自说自话/">自说自话</a> <span class="category-list-count">3</span></li></ul></div></div><div class="nexmoe-widget-wrap"><br><div id="randomtagcloud" class="nexmoe-widget tagcloud nexmoe-rainbow"> <a href="/tags/C%E8%AF%AD%E8%A8%80/" style="font-size:10px">C语言</a> <a href="/tags/Vuepress/" style="font-size:10px">Vuepress</a> <a href="/tags/arch/" style="font-size:10px">arch</a> <a href="/tags/gulp/" style="font-size:10px">gulp</a> <a href="/tags/hexo/" style="font-size:10px">hexo</a> <a href="/tags/linux/" style="font-size:10px">linux</a> <a href="/tags/sharlist/" style="font-size:10px">sharlist</a> <a href="/tags/something/" style="font-size:16.67px">something</a> <a href="/tags/%E4%BA%91%E5%AD%98%E5%82%A8/" style="font-size:13.33px">云存储</a> <a href="/tags/%E4%BC%98%E5%8C%96/" style="font-size:10px">优化</a> <a href="/tags/%E5%8A%A0%E9%80%9F/" style="font-size:10px">加速</a> <a href="/tags/%E5%A4%A9%E7%BF%BC%E4%BA%91/" style="font-size:10px">天翼云</a> <a href="/tags/%E6%8A%98%E8%85%BE%E7%AC%94%E8%AE%B0/" style="font-size:20px">折腾笔记</a> <a href="/tags/%E8%87%AA%E8%AF%B4%E8%87%AA%E8%AF%9D/" style="font-size:13.33px">自说自话</a> <a href="/tags/%E8%B8%A9%E5%9D%91/" style="font-size:10px">踩坑</a> <a href="/tags/%E9%9A%8F%E5%BF%83/" style="font-size:10px">随心</a></div><script>for(var maxTagcloud=parseInt(10),tags_length=parseInt(16),tags_arr=[],i=0;i<tags_length;i++)tags_arr.push(i);tags_arr.sort(function(a,t){return.5<Math.random()?-1:1}),tags_arr=tags_arr.slice(0,maxTagcloud<tags_length?tags_length-maxTagcloud:0);for(var tag_i=0;tag_i<tags_arr.length;tag_i++)document.getElementById("randomtagcloud").children[tags_arr[tag_i]].style.display="none"</script></div></aside><div class="nexmoe-copyright"> &copy; 2020 TniAsu Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> & <a href="https://nexmoe.com/hexo-theme-nexmoe.html" target="_blank">Nexmoe</a></div></div></div><div id="nexmoe-content"><div class="nexmoe-primary"><div class="nexmoe-post"><div class="nexmoe-post-cover mdui-ripple" style="padding-bottom:76.19047619047619%"> <img data-src="https://cdn.ventoso.top/images/sky.jpg!tnia" data-sizes="auto" alt="Gulp in Hexo" class="lazyload"></div><h2>Gulp in Hexo</h2><div class="nexmoe-post-meta nexmoe-rainbow" style="margin:10px 0!important"><a><i class="nexmoefont icon-calendar-fill"></i> 2020年04月27日</a><a><i class="nexmoefont icon-areachart"></i> 1.2k 字</a><a><i class="nexmoefont icon-time-circle-fill"></i> 大概 6 分钟</a></div><div class="nexmoe-post-right"></div><article><p>使用 Gulp 来压缩你的 Hexo 静态资源</p><a id="more"></a><p>幸福值，对一个网站来说，应该是客户端的体验吧，不外乎网站访问速度是否流畅，内容是否有益且舒适……<br>而使用 Gulp 来压缩静态资源，兴许能增加这个幸福值，至少我是这么认为的！</p><h2 id="先上方案"><a href="#先上方案" class="headerlink" title="先上方案"></a>先上方案</h2><ol><li><p>在你的博客根目录下安装相关插件/包。</p><pre><code class="shell">$ npm install --global gulp-cli #全局安装 gulp-cli 命令行工具模块</code></pre><pre><code class="shell">$ npm install gulp --save #本地安装 gulp 插件
+$ npm install gulp-htmlclean gulp-htmlmin gulp-clean-css gulp-uglify gulp-imagemin --save #安装 gulp 不同功能插件
+$ npm install gulp-babel babel-preset-env babel-preset-mobx --save #安装编译压缩所需babel 插件
+$ npm install -D @babel/core @babel/preset-react @babel/preset-env --save # 安装 babel 包</code></pre></li></ol><ol start="2"><li><p>安装完成后需要检查 package.json，到 2020.4.30 之时，生成的 package.json 应该至少包含如下内容,，否则复制并执行 <code>npm install</code> 。</p><pre><code class="json">  &quot;dependencies&quot;: {
+    &quot;babel-preset-env&quot;: &quot;^1.7.0&quot;,
+    &quot;babel-preset-mobx&quot;: &quot;^2.0.0&quot;,
+    &quot;gulp&quot;: &quot;^4.0.2&quot;,
+    &quot;gulp-babel&quot;: &quot;^8.0.0&quot;,
+    &quot;gulp-clean-css&quot;: &quot;^4.2.0&quot;,
+    &quot;gulp-htmlclean&quot;: &quot;^2.7.22&quot;,
+    &quot;gulp-htmlmin&quot;: &quot;^5.0.1&quot;,
+    &quot;gulp-imagemin&quot;: &quot;^7.1.0&quot;,
+    &quot;gulp-uglify&quot;: &quot;^3.0.2&quot;,
+  },
+  &quot;devDependencies&quot;: {
+    &quot;@babel/cli&quot;: &quot;^7.8.4&quot;,
+    &quot;@babel/core&quot;: &quot;^7.9.0&quot;,
+    &quot;@babel/preset-env&quot;: &quot;^7.9.5&quot;,
+    &quot;@babel/preset-react&quot;: &quot;^7.9.4&quot;,
+    &quot;babel-eslint&quot;: &quot;^8.2.6&quot;,
+    &quot;eslint&quot;: &quot;^4.19.1&quot;
+  }</code></pre></li></ol><ol start="3"><li><p>在博客根目录创建 <code>gulpfile.js</code> 并将以下内容复制粘贴到 gulofile.js 中</p><pre><code class="js">let gulp = require(&#39;gulp&#39;)
+let cleanCSS = require(&#39;gulp-clean-css&#39;)
+let htmlmin = require(&#39;gulp-htmlmin&#39;)
+let htmlclean = require(&#39;gulp-htmlclean&#39;)
+let babel = require(&#39;gulp-babel&#39;) /* 转换为es2015 */
+let uglify = require(&#39;gulp-uglify&#39;)
+let imagemin = require(&#39;gulp-imagemin&#39;)
+
+// 设置根目录
+const root = &#39;./public&#39;
+
+// 匹配模式， **/*代表匹配所有目录下的所有文件
+const pattern = &#39;**/*&#39;
+
+// 压缩html
+gulp.task(&#39;minify-html&#39;, function() {
+  return gulp
+    // 匹配所有 .html结尾的文件
+    .src(`${root}/${pattern}.html`)
+    .pipe(htmlclean())
+    .pipe(
+      htmlmin({
+        removeComments: true,
+        minifyJS: true,
+        minifyCSS: true,
+        minifyURLs: true
+      })
+    )
+    .pipe(gulp.dest(&#39;./public&#39;))
+})
+
+// 压缩css
+gulp.task(&#39;minify-css&#39;, function() {
+  return gulp
+    // 匹配所有 .css结尾的文件
+    .src(`${root}/${pattern}.css`)
+    .pipe(
+      cleanCSS({
+        compatibility: &#39;ie8&#39;
+      })
+    )
+    .pipe(gulp.dest(&#39;./public&#39;))
+})
+
+// 压缩js
+gulp.task(&#39;minify-js&#39;, function() {
+  return gulp
+    // 匹配所有 .js结尾的文件
+    .src(`${root}/${pattern}.js`)
+    .pipe(
+      babel({
+        presets: [&#39;@babel/preset-env&#39;]
+      })
+    )
+    .pipe(uglify())
+    .pipe(gulp.dest(&#39;./public&#39;))
+})
+
+// 压缩图片
+gulp.task(&#39;minify-images&#39;, function() {
+  return gulp
+    // 匹配public/images目录下的所有文件
+    .src(`${root}/images/${pattern}`)
+    .pipe(
+      imagemin(
+        [
+          imagemin.gifsicle({ optimizationLevel: 3 }),
+          imagemin.jpegtran({ progressive: true }),
+          imagemin.optipng({ optimizationLevel: 7 }),
+          imagemin.svgo()
+        ],
+        { verbose: true }
+      )
+    )
+    .pipe(gulp.dest(&#39;./public/images&#39;))
+})
+
+gulp.task(&#39;default&#39;, gulp.series(&#39;minify-html&#39;, &#39;minify-css&#39;, &#39;minify-js&#39;))</code></pre></li></ol><p> End :完成之后可使用 hexo g 生成静态文件并执行 gulp 检查是否能够运行。</p><p> 无误之后，可以在生成静态文件之后使用 gulp 来压缩静态资源。</p><pre><code class="shell">   $ hexo cl &amp;&amp; hexo g &amp;&amp; gulp</code></pre><p> 也可以通过写脚本来精简命令</p><p> 在博客根目录下的 package.json 中修改</p><pre><code class="json">   &quot;scripts&quot;: {
+     &quot;build&quot;: &quot;hexo clean &amp;&amp; hexo g &amp;&amp; gulp&quot;,
+     &quot;deploy&quot;: &quot;hexo clean &amp;&amp; hexo g &amp;&amp; gulp &amp;&amp; hexo d&quot;
+   }</code></pre><p> 构建只需要执行 <code>npm run build</code> ，构建发布只需要执行 <code>npm run deploy</code> 。</p><h2 id="再说故事"><a href="#再说故事" class="headerlink" title="再说故事"></a>再说故事</h2><p>很早就使用过 gulp 来压缩静态资源， 最近一次重装系统，之后 gulp 就不能再使用了，于是我又再网上搜起了教程，网上清一色的都是远古教程，没有最近更新能用的，就来一周之内的能用的也没有找到一个，坚信着只要不放弃，就一定能解决问题的信念，我在网上找到了许多教程</p><p>终于有一个，能运行，虽然不能顺利压缩 js 资源，但是 css 和 html 都可以正常压缩，我现在提供的这份 gulpfile.js 也是参照那位大佬所写的，而我唯一跟他不同的也只有第 52 行代码。</p><pre><code>presets: [&#39;env&#39;] #这是那位大佬的</code></pre><pre><code>presets: [&#39;@babel/preset-env&#39;] #这是我的</code></pre><p>确实相差不大，不过也正是这一点不同才导致了一些 javascript 资源无法正常压缩<br>如果照着那位大佬写的话，会报以下错误</p><pre><code class="shell">[16:29:18] TypeError in plugin &quot;gulp-babel&quot;
+Message:
+    /home/tniasu/documents/blog/public/js/app.js: Cannot read property &#39;bindings&#39; of null
+[16:29:18] &#39;default&#39; errored after 1.72 s</code></pre><p>搜索可知道这是因为压缩 javascript 文件需要 babel 编译打包的参与，而安装的 webpack版本没有与 babel 版本对应（所以说此类文章具有时效性？！），否则即使配置项 exclude 配置了node_modules也可能会报错。(没学过 javascript 可能是？)<br>修改参数即可</p><ul><li><strong>参考自:</strong><ul><li><a href="https://www.voidking.com/dev-hexo-gulp/" target="_blank" rel="noopener">VoidKing博客：使用 gulp 压缩 hexo 静态资源</a> 本文内容多半来自此文，略有修改。</li><li><a href="https://stackoverflow.com/questions/52092739/upgrade-to-babel-7-cannot-read-property-bindings-of-null" target="_blank" rel="noopener">stackoverflow</a></li><li><a href="https://www.gulpjs.com.cn/" target="_blank" rel="noopener">https://www.gulpjs.com.cn/</a></li></ul></li></ul></article><div class="nexmoe-post-meta nexmoe-rainbow"> <a class="nexmoefont icon-appstore-fill -link" href="/categories/%E4%BD%95%E4%B8%BA%E6%8A%98%E8%85%BE/">何为折腾</a> <a class="nexmoefont icon-tag-fill -link" href="/tags/gulp/" rel="tag">gulp</a> <a class="nexmoefont icon-tag-fill -link" href="/tags/hexo/" rel="tag">hexo</a> <a class="nexmoefont icon-tag-fill -link" href="/tags/%E4%BC%98%E5%8C%96/" rel="tag">优化</a> <a class="nexmoefont icon-tag-fill -link" href="/tags/%E5%8A%A0%E9%80%9F/" rel="tag">加速</a></div><div class="nexmoe-post-footer"><div class="nexmoe-post-copyright"> <strong>本文作者：</strong>TniAsu<br> <strong>本文链接：</strong><a href="https://www.lilineon.com/51356.html" title="https:&#x2F;&#x2F;www.lilineon.com&#x2F;51356.html" target="_blank" rel="noopener">https:&#x2F;&#x2F;www.lilineon.com&#x2F;51356.html</a><br> <strong>版权声明：</strong>本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a> 协议进行许可，转载请表明出处</div><section class="nexmoe-comment"><div class="valine"></div><script src="https://cdn.jsdelivr.net/npm/valine@1.3.9/dist/Valine.min.js"></script><script>new Valine({el:".valine",appId:"BbVcftus8mMdsLphJWVahErh-gzGzoHsz",appKey:"gmauQlfIJgosJI0rqaGUvtN0"})</script></section></div></div></div></div><script src="https://cdn.jsdelivr.net/combine/npm/lazysizes@5.1.0/lazysizes.min.js,gh/highlightjs/cdn-release@9.15.8/build/highlight.min.js,npm/mdui@0.4.3/dist/js/mdui.min.js,gh/nexmoe/nexmoe.github.io@latest/js/app.js"></script><script>hljs.initHighlightingOnLoad()</script><script src="//instant.page/3.0.0" type="module" defer="defer" integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script><script>!function(){var t=document.createElement("script"),e=window.location.protocol.split(":")[0];t.src="https"===e?"https://zz.bdstatic.com/linksubmit/push.js":"http://push.zhanzhang.baidu.com/push.js";var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(t,s)}()</script></body></html>
