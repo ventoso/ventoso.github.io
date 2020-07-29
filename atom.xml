@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.lilineon.com/"/>
-  <updated>2020-07-01T15:19:56.000Z</updated>
+  <updated>2020-07-29T02:56:53.287Z</updated>
   <id>https://www.lilineon.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>留给我时间</title>
+    <link href="https://www.lilineon.com/36269.html"/>
+    <id>https://www.lilineon.com/36269.html</id>
+    <published>2020-07-29T03:25:32.000Z</published>
+    <updated>2020-07-29T02:56:53.287Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;strong&gt;留给我时间的是某个自己&lt;/strong&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="自说自话" scheme="https://www.lilineon.com/categories/%E8%87%AA%E8%AF%B4%E8%87%AA%E8%AF%9D/"/>
+    
+    
+      <category term="something" scheme="https://www.lilineon.com/tags/something/"/>
+    
+      <category term="自说自话" scheme="https://www.lilineon.com/tags/%E8%87%AA%E8%AF%B4%E8%87%AA%E8%AF%9D/"/>
+    
+  </entry>
   
   <entry>
     <title>作弊</title>
@@ -33,9 +56,9 @@
       <category term="自说自话" scheme="https://www.lilineon.com/categories/%E8%87%AA%E8%AF%B4%E8%87%AA%E8%AF%9D/"/>
     
     
-      <category term="自说自话" scheme="https://www.lilineon.com/tags/%E8%87%AA%E8%AF%B4%E8%87%AA%E8%AF%9D/"/>
-    
       <category term="something" scheme="https://www.lilineon.com/tags/something/"/>
+    
+      <category term="自说自话" scheme="https://www.lilineon.com/tags/%E8%87%AA%E8%AF%B4%E8%87%AA%E8%AF%9D/"/>
     
   </entry>
   
@@ -56,9 +79,9 @@
       <category term="自说自话" scheme="https://www.lilineon.com/categories/%E8%87%AA%E8%AF%B4%E8%87%AA%E8%AF%9D/"/>
     
     
-      <category term="自说自话" scheme="https://www.lilineon.com/tags/%E8%87%AA%E8%AF%B4%E8%87%AA%E8%AF%9D/"/>
-    
       <category term="something" scheme="https://www.lilineon.com/tags/something/"/>
+    
+      <category term="自说自话" scheme="https://www.lilineon.com/tags/%E8%87%AA%E8%AF%B4%E8%87%AA%E8%AF%9D/"/>
     
   </entry>
   
@@ -113,11 +136,11 @@
   </entry>
   
   <entry>
-    <title>Arch Linux optimization</title>
+    <title>Arch Linux 配置与调优</title>
     <link href="https://www.lilineon.com/ef14aad6.html"/>
     <id>https://www.lilineon.com/ef14aad6.html</id>
     <published>2020-04-25T02:08:24.000Z</published>
-    <updated>2020-05-04T03:20:46.000Z</updated>
+    <updated>2020-07-29T02:39:07.903Z</updated>
     
     <summary type="html">
     
@@ -154,9 +177,9 @@
       <category term="何为折腾" scheme="https://www.lilineon.com/categories/%E4%BD%95%E4%B8%BA%E6%8A%98%E8%85%BE/"/>
     
     
-      <category term="折腾笔记" scheme="https://www.lilineon.com/tags/%E6%8A%98%E8%85%BE%E7%AC%94%E8%AE%B0/"/>
-    
       <category term="something" scheme="https://www.lilineon.com/tags/something/"/>
+    
+      <category term="折腾笔记" scheme="https://www.lilineon.com/tags/%E6%8A%98%E8%85%BE%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   
@@ -250,9 +273,9 @@
       <category term="自说自话" scheme="https://www.lilineon.com/categories/%E8%87%AA%E8%AF%B4%E8%87%AA%E8%AF%9D/"/>
     
     
-      <category term="something" scheme="https://www.lilineon.com/tags/something/"/>
-    
       <category term="随心" scheme="https://www.lilineon.com/tags/%E9%9A%8F%E5%BF%83/"/>
+    
+      <category term="something" scheme="https://www.lilineon.com/tags/something/"/>
     
   </entry>
   
